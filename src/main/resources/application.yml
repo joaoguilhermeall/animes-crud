@@ -1,1 +1,31 @@
+# PROFILE CONFIGURATION
+
+# THIS CONFIGURATION SET THE PROFILE THAT WILL RUN BY DEFAULT
+
+spring:
+  # config:
+  #   activate:
+  #     on-profile:
+  #     - dev
+  
+  # Deprecated
+  profiles:
+    active: dev
+
+  # DATASOURCE CONFIGURATIONS
+  datasource:
+    url: jdbc:mysql://localhost:3306/animes
+    username: user_for_animes
+    password: user_for_animes
+    generate-unique-name: false
+
+  # This configuration say what happens with ddl handling mode
+  # Shortcut for the "hibernate.hbm2ddl.auto" property
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+# Property to change default (8080) port of TomCat
+server:
+  port: 1122
 
